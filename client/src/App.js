@@ -8,12 +8,11 @@ import {
   FormControl,
   Button
 } from 'react-bootstrap';
-import{ FlipCard,
-  setFlipped,
-  
-} from './FlipCard'
+import logo from './yurionice.jpg';
+import FlipCard from './FlipCard'
 // import logo from './logo.svg';
-// import './App.css';
+//import './App.css';
+//import FlipCard from './FlipCard';
 
 function App() {
 
@@ -95,8 +94,12 @@ function App() {
         </Carousel>
         <Container>
         <h1>categorias</h1>
-        <Container className="App">
-         <FlipCard />
+        <Container className="cards">
+          <FlipCard imgURL={logo} />
+          <FlipCard />
+          <FlipCard />
+          <FlipCard />
+          <FlipCard />
         </Container>
         </Container>
     </Container>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const FlipCard = props => {
 
-const [flipped, stFlipped] = useState (false);
+const [flipped, setFlipped] = useState (false);
 
 
 return(
@@ -10,9 +10,9 @@ return(
      onMouseEnter={() => setFlipped(true)}
      onMouseLeave={() => setFlipped(false)}
      className="flipcard">
-     <h2>hola</h2>
+     {flipped && <h1>hola</h1>}
      {flipped && <p>flipped verdadero</p>}
-     {!flipped && <p>flipped falso</p>}
+     {!flipped && <img src={props.imgURL} />}
      </div>
   );
 };
