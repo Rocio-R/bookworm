@@ -30,16 +30,21 @@ function App() {
       style={{ maxHeight: '100px' }}
       navbarScroll
     >
-      <Nav.Link href="#action1">Home</Nav.Link>
-      <Nav.Link href="#action2">Link</Nav.Link>
-      <NavDropdown title="Link" id="navbarScrollingDropdown">
-        <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+      <Nav.Link href="App.js">Home</Nav.Link>
+      <NavDropdown title="Categorias" id="navbarScrollingDropdown">
+        <NavDropdown.Item href="#action1">Aventuras</NavDropdown.Item>
+        <NavDropdown.Item href="#action2">Suspenso</NavDropdown.Item>
+        <NavDropdown.Item href="#action3">Fantasia</NavDropdown.Item>
+        <NavDropdown.Item href="#action4">Comic</NavDropdown.Item>
+        <NavDropdown.Item href="#action5">No ficción</NavDropdown.Item>
+        <NavDropdown.Item href="#action6">Historico</NavDropdown.Item>
+        <NavDropdown.Item href="#action7">assd</NavDropdown.Item>
+        <NavDropdown.Item href="#action8">Realista</NavDropdown.Item>
+        <NavDropdown.Item href="#action9">Realista</NavDropdown.Item>
+        <NavDropdown.Item href="#action10">Fanfic</NavDropdown.Item>
       </NavDropdown>
       <Nav.Link href="#" disabled>
-        Link
+
       </Nav.Link>
     </Nav>
     <Form onSubmit={hola} className="d-flex">
@@ -52,6 +57,7 @@ function App() {
       <Button type="submit" variant="outline-success">Search</Button>
     </Form>
   </Navbar.Collapse>
+  <Button> iniciar sesion</Button>
 </Navbar>
 </Container>
 <Container className="mt-4">
@@ -95,14 +101,81 @@ function App() {
         <Container>
         <h1>categorias</h1>
         <Container className="cards">
-          <FlipCard imgURL={logo} />
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
+          <FlipCard imgURL={logo} classname="foto" />
+          <FlipCard  imgURL={logo}/>
+          <FlipCard  imgURL={logo}/>
         </Container>
         </Container>
     </Container>
+    <footer class="bg-light text-center text-white">
+      {/*<Grid container>*/}
+      <div class="container p-4 pb-0">
+        {/*<Section: Social media>*/}
+        <section class="mb-4">
+          {/*<Facebook>*/}
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style={{backgroundColor: '#3b5998'}}
+            href="https://es-la.facebook.com/pages/category/Teens---Kids-Website/Seguidores-De-La-GRASA-367867570349333/"
+            role="button">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          {/*<Twitter>*/}
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style={{backgroundColor: '#55acee'}}
+            href="https://twitter.com/PlayOverwatch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            role="button">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          {/*<Google>*/}
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style={{backgroundColor: '#dd4b39'}}
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            role="button">
+            <i class="fab fa-google"></i>
+          </a>
+
+          {/*<Instagram>*/}
+          <a
+            class="btn btn-primary btn-floating m-1"
+             style={{backgroundColor: '#ac2bac'}}
+            href="https://www.instagram.com/p/BsOGulcndj-/?utm_medium=share_sheet"
+            role="button">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          {/*<Linkedin>*/}
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style={{backgroundColor: '#0082ca'}}
+            href="#!"
+            role="button">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+          {/*<Github>*/}
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style={{backgroundColor: '#333333'}}
+            href="https://github.com/Rocio-R/bookworm"
+            role="button">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+        {/*<Section: Social media>*/}
+      </div>
+      {/*<Grid container>*/}
+
+      {/*<Copyright>*/}
+      <div class="text-center p-3" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      {/*<Copyright>*/}
+    </footer>
     </div>
 
   );
