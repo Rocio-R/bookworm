@@ -1,4 +1,4 @@
-import {
+ import {
   Navbar,
   Nav,
   NavDropdown,
@@ -9,10 +9,77 @@ import {
   Button
 } from 'react-bootstrap';
 import logo from './yurionice.jpg';
-import FlipCard from './FlipCard'
+import FlipCard from './FlipCard';
+import { Routes, Route } from 'react-router-dom';
+
 // import logo from './logo.svg';
 //import './App.css';
 //import FlipCard from './FlipCard';
+
+const categories = [
+  {
+    id: 1,
+    title: 'Aventuras',
+    description: 'Historias maravillosas',
+    imgURL: logo
+  },
+  {
+    id: 2,
+    title: 'Suspenso',
+    description: 'Sustos que dan gusto',
+    imgURL: logo
+  },
+  {
+    id: 3,
+    title: 'Fantasia',
+    description: 'Historas del mas alla',
+    imgURL: logo
+  },
+  {
+    id: 4,
+    title: 'Comic',
+    description: 'Comic estadounidences',
+    imgURL: logo
+  },
+  {
+    id: 5,
+    title: 'No ficción',
+    description: 'Realidad atravez de la pantalla',
+    imgURL: logo
+  },
+];
+const categories2 = [
+  {
+    id: 6,
+    title: 'Historicos',
+    description: 'Anecdotas',
+    imgURL: logo
+  },
+  {
+    id: 7,
+    title: 'Mitologia',
+    description: 'El origen del Fanfiction',
+    imgURL: logo
+  },
+  {
+    id: 8,
+    title: 'BL',
+    description: 'Amor entre hombres',
+    imgURL: logo
+  },
+  {
+    id: 9,
+    title: 'Manga',
+    description: 'Comic japoneces',
+    imgURL: logo
+  },
+  {
+    id: 10,
+    title: 'Fanfic',
+    description: 'Historias mas alla de la realidad',
+    imgURL: logo
+  },
+];
 
 function App() {
 
@@ -22,7 +89,7 @@ function App() {
     <div>
     <Container fluid>
     <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+  <Navbar.Brand href="#">Bookworm</Navbar.Brand>
   <Navbar.Toggle aria-controls="navbarScroll" />
   <Navbar.Collapse id="navbarScroll">
     <Nav
@@ -38,9 +105,9 @@ function App() {
         <NavDropdown.Item href="#action4">Comic</NavDropdown.Item>
         <NavDropdown.Item href="#action5">No ficción</NavDropdown.Item>
         <NavDropdown.Item href="#action6">Historico</NavDropdown.Item>
-        <NavDropdown.Item href="#action7">assd</NavDropdown.Item>
-        <NavDropdown.Item href="#action8">Realista</NavDropdown.Item>
-        <NavDropdown.Item href="#action9">Realista</NavDropdown.Item>
+        <NavDropdown.Item href="#action7">Mitologia</NavDropdown.Item>
+        <NavDropdown.Item href="#action8">BL</NavDropdown.Item>
+        <NavDropdown.Item href="#action9">Manga</NavDropdown.Item>
         <NavDropdown.Item href="#action10">Fanfic</NavDropdown.Item>
       </NavDropdown>
       <Nav.Link href="#" disabled>
@@ -60,6 +127,11 @@ function App() {
   <Button> iniciar sesion</Button>
 </Navbar>
 </Container>
+<Routes>
+<Route path="/terror">
+  <h2>Otra pagina</h2>
+</Route>
+<Route path="/">
 <Container className="mt-4">
       <Carousel>
         <Carousel.Item>
@@ -101,12 +173,27 @@ function App() {
         <Container>
         <h1>categorias</h1>
         <Container className="cards">
-          <FlipCard imgURL={logo} classname="foto" />
-          <FlipCard  imgURL={logo}/>
-          <FlipCard  imgURL={logo}/>
+          {categories.map(category => (
+            <FlipCard
+              imgURL={category.imgURL}
+              title={category.title}
+              description={category.description}
+            />
+          ))}
+        </Container>
+        <Container className="cards">
+        {categories2.map(category => (
+          <FlipCard
+            imgURL={category.imgURL}
+            title={category.title}
+            description={category.description}
+          />
+        ))}
         </Container>
         </Container>
     </Container>
+    </Route>
+    </Routes>
     <footer class="bg-light text-center text-white">
       {/*<Grid container>*/}
       <div class="container p-4 pb-0">
@@ -125,7 +212,7 @@ function App() {
           <a
             class="btn btn-primary btn-floating m-1"
             style={{backgroundColor: '#55acee'}}
-            href="https://twitter.com/PlayOverwatch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            href="https://twitter.com/seradotwav?lang=es"
             role="button">
             <i class="fab fa-twitter"></i>
           </a>
@@ -152,7 +239,7 @@ function App() {
           <a
             class="btn btn-primary btn-floating m-1"
             style={{backgroundColor: '#0082ca'}}
-            href="#!"
+            href="https://yurionice.fandom.com/es/wiki/Yuri!!!_on_Ice"
             role="button">
             <i class="fab fa-linkedin-in"></i>
             </a>

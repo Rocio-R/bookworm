@@ -10,8 +10,8 @@ return(
      onMouseEnter={() => setFlipped(true)}
      onMouseLeave={() => setFlipped(false)}
      className="flipcard">
-     {flipped && <h1>hola</h1>}
-     {flipped && <p>flipped verdadero</p>}
+     {flipped && <h1>{props.title}</h1>}
+     {flipped && <p>{props.description}</p>}
      {!flipped && <img src={props.imgURL} />}
      </div>
   );
