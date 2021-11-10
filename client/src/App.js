@@ -9,10 +9,19 @@
   Button
 } from 'react-bootstrap';
 import logo from './yurionice.jpg';
+import aventura from './aventura.jpg';
 import FlipCard from './FlipCard';
 import Main from './Main';
 import Terror from './Terror';
-
+import Aventura from './Aventura';
+import Suspenso from './Suspenso';
+import Fantasia from './fantasia';
+import Comic from './comic';
+import Noficcion from './noFiccion';
+import Historicos from './historicos';
+import Mitologia from './mitologia';
+import Manga from './manga';
+import Fanfic from './fanfic';
 import { Routes, Route } from 'react-router-dom';
 
 // import logo from './logo.svg';
@@ -24,7 +33,7 @@ const categories = [
     id: 1,
     title: 'Aventuras',
     description: 'Historias maravillosas',
-    imgURL: logo
+    imgURL: aventura
   },
   {
     id: 2,
@@ -100,7 +109,7 @@ function App() {
       style={{ maxHeight: '100px' }}
       navbarScroll
     >
-      <Nav.Link href="App.js">Home</Nav.Link>
+      <Nav.Link href="Main.js">Home</Nav.Link>
       <NavDropdown title="Categorias" id="navbarScrollingDropdown">
         <NavDropdown.Item href="#action1">Aventuras</NavDropdown.Item>
         <NavDropdown.Item href="#action2">Suspenso</NavDropdown.Item>
@@ -109,7 +118,7 @@ function App() {
         <NavDropdown.Item href="#action5">No ficción</NavDropdown.Item>
         <NavDropdown.Item href="#action6">Historico</NavDropdown.Item>
         <NavDropdown.Item href="#action7">Mitologia</NavDropdown.Item>
-        <NavDropdown.Item href="#action8">BL</NavDropdown.Item>
+        <NavDropdown.Item href="#action8">Terror</NavDropdown.Item>
         <NavDropdown.Item href="#action9">Manga</NavDropdown.Item>
         <NavDropdown.Item href="#action10">Fanfic</NavDropdown.Item>
       </NavDropdown>
@@ -132,6 +141,15 @@ function App() {
 </Container>
 <Routes>
 <Route path="/terror" element={<Terror />} />
+<Route path="/Aventura" element={<Aventura />} />
+<Route path="/Suspenso" element={<Suspenso />} />
+<Route path="/fantasia" element={<Fantasia />} />
+<Route path="/comic" element={<Comic />} />
+<Route path="/noFiccion" element={<Noficcion />} />
+<Route path="/historicos" element={<Historicos />} />
+<Route path="/mitologia" element={<Mitologia />} />
+<Route path="/manga" element={<Manga />} />
+<Route path="/fanfic" element={<Fanfic />} />
 <Route path="/" element={<Main />} />
 
 

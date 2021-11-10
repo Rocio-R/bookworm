@@ -7,7 +7,7 @@ const [flipped, setFlipped] = useState (false);
 
 
 return(
-  <Link to="/terror">
+  <Link style={{textDecoration: 'none', color: 'black'}} to={props.link}>
   <div
      onMouseEnter={() => setFlipped(true)}
      onMouseLeave={() => setFlipped(false)}

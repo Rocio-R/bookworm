@@ -9,6 +9,18 @@ import {
  Button
 } from 'react-bootstrap';
 import logo from './yurionice.jpg';
+import aventura from './aventura.jpg';
+import suspenso from './suspenso.jpg';
+import fantasia from './fantasia.jpg';
+import comic from './comic.jpg';
+import noFiccion from './noFiccion.png';
+import historico from './historico.jpg';
+import mitologia from './mitologia.jpg';
+import terror from './terror.jpg';
+import manga from './manga.jpg';
+import fanfic from './fanfic1.png';
+import imagen2 from './imagen2.jpg';
+import imagen3 from './imagen3.jpg';
 import FlipCard from './FlipCard';
 
 
@@ -21,63 +33,73 @@ const categories = [
    id: 1,
    title: 'Aventuras',
    description: 'Historias maravillosas',
-   imgURL: logo
+   imgURL: aventura,
+   link:'/Aventura'
  },
  {
    id: 2,
    title: 'Suspenso',
    description: 'Sustos que dan gusto',
-   imgURL: logo
+   imgURL: suspenso,
+   link:'/Suspenso'
  },
  {
    id: 3,
    title: 'Fantasia',
    description: 'Historas del mas alla',
-   imgURL: logo
+   imgURL: fantasia,
+   link:'/fantasia'
  },
  {
    id: 4,
    title: 'Comic',
    description: 'Comic estadounidences',
-   imgURL: logo
+   imgURL: comic,
+   link:'/comic'
  },
  {
    id: 5,
    title: 'No ficción',
    description: 'Realidad atravez de la pantalla',
-   imgURL: logo
+   imgURL: noFiccion,
+   link:'/noFiccion'
  },
-];
+ ];
 const categories2 = [
  {
    id: 6,
    title: 'Historicos',
    description: 'Anecdotas',
-   imgURL: logo
+   imgURL: historico,
+   link:'/historicos'
  },
  {
    id: 7,
    title: 'Mitologia',
    description: 'El origen del Fanfiction',
-   imgURL: logo
+   imgURL: mitologia,
+   link:'/mitologia'
  },
  {
    id: 8,
-   title: 'BL',
-   description: 'Amor entre hombres',
-   imgURL: logo
+   title: 'Terror',
+   description: 'te cagas hasta las patas',
+   imgURL: terror,
+   link: '/terror'
  },
  {
    id: 9,
    title: 'Manga',
    description: 'Comic japoneces',
-   imgURL: logo
- },
+   imgURL: manga,
+   link:'/manga'
+  },
  {
    id: 10,
    title: 'Fanfic',
    description: 'Historias mas alla de la realidad',
-   imgURL: logo
+   imgURL: fanfic,
+   link:'/fanfic'
  },
 ];
 
@@ -88,24 +110,24 @@ const Main = props => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="holder.js/800x400?text=First slide&bg=373940"
+                src={imagen2}
                 alt="First slide"
               />
               <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h3></h3>
+                <p></p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="holder.js/800x400?text=Second slide&bg=282c34"
+                src={imagen3}
                 alt="Second slide"
               />
 
               <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3></h3>
+                <p></p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -129,6 +151,7 @@ const Main = props => {
                   imgURL={category.imgURL}
                   title={category.title}
                   description={category.description}
+                  link={category.link}
                 />
               ))}
             </Container>
@@ -138,6 +161,7 @@ const Main = props => {
                 imgURL={category.imgURL}
                 title={category.title}
                 description={category.description}
+                link={category.link}
               />
             ))}
             </Container>
