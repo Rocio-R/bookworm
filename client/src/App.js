@@ -109,18 +109,18 @@ function App() {
       style={{ maxHeight: '100px' }}
       navbarScroll
     >
-      <Nav.Link href="Main.js">Home</Nav.Link>
+      <Nav.Link href="/Main.js">Home</Nav.Link>
       <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-        <NavDropdown.Item href="#action1">Aventuras</NavDropdown.Item>
-        <NavDropdown.Item href="#action2">Suspenso</NavDropdown.Item>
-        <NavDropdown.Item href="#action3">Fantasia</NavDropdown.Item>
-        <NavDropdown.Item href="#action4">Comic</NavDropdown.Item>
-        <NavDropdown.Item href="#action5">No ficción</NavDropdown.Item>
-        <NavDropdown.Item href="#action6">Historico</NavDropdown.Item>
-        <NavDropdown.Item href="#action7">Mitologia</NavDropdown.Item>
-        <NavDropdown.Item href="#action8">Terror</NavDropdown.Item>
-        <NavDropdown.Item href="#action9">Manga</NavDropdown.Item>
-        <NavDropdown.Item href="#action10">Fanfic</NavDropdown.Item>
+        <NavDropdown.Item href="/Aventura">Aventuras</NavDropdown.Item>
+        <NavDropdown.Item href="/Suspenso">Suspenso</NavDropdown.Item>
+        <NavDropdown.Item href="/fantasia">Fantasia</NavDropdown.Item>
+        <NavDropdown.Item href="/comic">Comic</NavDropdown.Item>
+        <NavDropdown.Item href="/noficcion">No ficción</NavDropdown.Item>
+        <NavDropdown.Item href="/historicos">Historico</NavDropdown.Item>
+        <NavDropdown.Item href="/mitologia">Mitologia</NavDropdown.Item>
+        <NavDropdown.Item href="/terror">Terror</NavDropdown.Item>
+        <NavDropdown.Item href="/manga">Manga</NavDropdown.Item>
+        <NavDropdown.Item href="/fanfic">Fanfic</NavDropdown.Item>
       </NavDropdown>
       <Nav.Link href="#" disabled>
 
@@ -150,7 +150,7 @@ function App() {
 <Route path="/mitologia" element={<Mitologia />} />
 <Route path="/manga" element={<Manga />} />
 <Route path="/fanfic" element={<Fanfic />} />
-<Route path="/" element={<Main />} />
+<Route path="Main.js" element={<Main />} />
 
 
 </Routes>
