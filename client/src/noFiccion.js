@@ -1,6 +1,6 @@
-import imagen1 from './comic1b.jpg';
-import imagen2 from './comic2b.jpg';
-import imagen3 from './comic3b.jpg';
+import imagen1 from './noFiccionb1.png';
+import imagen2 from './noFiccionb2.jpg';
+import imagen3 from './noFiccionb3.jpeg';
 import {
   Carousel,
   Container
